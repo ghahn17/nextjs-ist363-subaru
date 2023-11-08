@@ -1,8 +1,8 @@
 import Layout from '../../components/Layout';
 import { getVehicleBySlug } from '../../lib/api';
 
-export async function getStaticPrompts () {
-    const vehicleData= getVehicleBySlug("impreza");
+export async function getStaticProps() {
+    const vehicleData = getVehicleBySlug("impreza");
 
     return {
         props : {
@@ -12,7 +12,7 @@ export async function getStaticPrompts () {
 }
 
 const SingleVehiclePage = ({ vehicleData }) => {
-    const { model, price} = vehicleData;
+    const { model, price } = vehicleData;
     return <Layout>
         <h1>{model}</h1>
         <h2>${price}</h2>
