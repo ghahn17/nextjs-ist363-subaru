@@ -5,14 +5,14 @@ import { getVehicleBySlug, getAllVehicleSlugs } from '../../lib/api';
 //1. getStaticPaths
  
 export async function getStaticPaths() {
-    const pathsArr = getAllVehicleSlugs ();
-
-const paths = pathsArr.map((slug)=> {
-    return {
-        params: {
-            id: slug
+    const getAllVehicleSlugs = getAllVehicleSlugs ();
+    const paths = vehicles.map((slug)=> {
+        const { slug } = vehicle.node;
+        return {
+            params: {
+                id: slug
+            }
         }
-    }
 
 });
 return {
