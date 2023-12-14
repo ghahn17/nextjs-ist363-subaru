@@ -1,7 +1,10 @@
+import Heading from './heading'
 import { motion } from "framer-motion" 
 import Image from 'next/image';
 import Link from 'next/link';
+import Paragraph from  './Paragraph.js';
 import styles from './grid.module.scss';
+
 const Grid = ({ items }) => {
     const sectionVariants= {
         closed: {
@@ -45,10 +48,17 @@ const Grid = ({ items }) => {
                     height={trimLevels [0].images.thumbnail.node.mediaDetails.height}
                 />
                 }
-                <h3> {title} </h3>
-                <p>
+                <Heading 
+                level={3} 
+                color="red"> 
+                {title} 
+                </Heading>
+                <Paragraph>
+                    Starting at $25,000
+                </Paragraph>
+                <Paragraph>
                     <Link href={`/vehicles/${slug}`}>Learn more</Link>
-                </p>
+                </Paragraph>
             </motion.article>
         })}
     </motion.section>

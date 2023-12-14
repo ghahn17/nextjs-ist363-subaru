@@ -4,7 +4,7 @@ import FilterBar from '../../components/FilterBar';
 import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
 import { getAllVehicles, getVehicleTypes } from '../../lib/api'; 
-
+import Heading from '../../components/heading'
 export async function getStaticProps () {
     const vehicles = await getAllVehicles ();
     const vehicleTypes = await getVehicleTypes ();
@@ -40,7 +40,15 @@ const VehiclesPage = ({vehicles, vehicleTypes }) => {
     });
 
     return <Layout>
-        <h1>Vehicles</h1>
+        <Heading 
+        level={1} 
+        color = "black"
+        textAlign= "center"
+        marginBottom = {2}
+        paddingBottom = {0.5}
+        >
+            Vehicles
+            </Heading>
         <Container>
             <FilterBar 
             items={vehicleTypes} 
@@ -48,7 +56,7 @@ const VehiclesPage = ({vehicles, vehicleTypes }) => {
             setActiveItem= {setActiveVehicleType}
             />
         <Grid 
-        items={ filteredVehicles }
+            items={ filteredVehicles }
         /> 
         </Container>
     </Layout>
