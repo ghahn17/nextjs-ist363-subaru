@@ -1,4 +1,3 @@
-import { LayoutGroup } from 'framer-motion';
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Logo from './Logo';
