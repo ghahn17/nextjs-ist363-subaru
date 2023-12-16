@@ -4,8 +4,6 @@ import { motion } from "framer-motion" ;
 import Link from 'next/link';
 import ButtonUI from './ButtonUI';
 
-
-
 const Nav = () => {
 return <nav className={styles.nav}>Nav goes here</nav>
 }
@@ -90,5 +88,11 @@ const Mobile = ( {closeHandler} ) => {
     </motion.nav>
 }
 Nav.Mobile= Mobile;
+
+const Social = () => {
+
+}
+
+Nav.Social=Social
 
 export default Nav;
