@@ -1,5 +1,5 @@
 import styles from './nav.module.scss';
-import { getDesktopNavItems, getMobileNavItems } from '../lib/nav';
+import { getDesktopNavItems, getMobileNavItems, getFooterSocialLinks } from '../lib/nav';
 import { motion } from "framer-motion" ;
 import Link from 'next/link';
 import ButtonUI from './ButtonUI';
@@ -89,10 +89,5 @@ const Mobile = ( {closeHandler} ) => {
 }
 Nav.Mobile= Mobile;
 
-const Social = () => {
-
-}
-
-Nav.Social=Social
-
 export default Nav;
+

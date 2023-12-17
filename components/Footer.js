@@ -1,16 +1,22 @@
 import styles from './footer.module.scss';
 import Row from './Row';
-import Nav from './Nav';
+import FooterSocials from './FooterSocials';
+
 const Footer = () => {
-    return <footer className={styles.footer}>
-         <Row>
-
-            <Nav.Social />
-
-
+    return (
+      <footer className={styles.footer}>
+        <Row justifyContent="center">
+            <p className={styles.connectText}>Connect with Us</p>  
         </Row>
 
+        <Row justifyContent="center"><FooterSocials /> </Row>
+        
 
-    </footer>
-}
-export default Footer;
+        <Row justifyContent="center">
+            <p className={styles.copyText}>Copyright 2023 Subaru.</p>
+        </Row>
+      </footer>
+    );
+  }
+  export default Footer;
+  
