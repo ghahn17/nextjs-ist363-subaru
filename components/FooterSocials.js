@@ -5,13 +5,13 @@ const FooterSocials = () => {
     const socialLinks = getFooterSocialLinks();
 
     return (
-        <div className={styles.footer__socials}>
+        <nav className={styles.footer__socials}>
             {socialLinks.map((link, index) => (
                 <a href={link.url} key={index} className={styles.social__links}>
                     <img src={link.icon} alt={`Social Icon ${index}`} />
                 </a>
             ))}
-        </div>
+        </nav>
     );
 };
 

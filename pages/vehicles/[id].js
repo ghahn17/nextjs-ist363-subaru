@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/Image';
 import Layout from '../../components/Layout';
 import { getVehicleBySlug, getAllVehicleSlugs } from '../../lib/api';
 
@@ -34,9 +34,11 @@ export async function getStaticProps({ params }) {
 // 3. page component 
 
 const SingleVehiclePage = ({ vehicleData }) => {
-    const { title, slug, featuredImage } = vehicleData;
+    const { title, slug, featuredImage,vehicleInformation } = vehicleData;
+    const { headline } = vehicleInformation.showcase;
     return <Layout>
         <h1>{title}</h1>
+        <h3>{headline}</h3>
         {featuredImage && 
         <Image
             src= {featuredImage.node.sourceUrl}

@@ -1,9 +1,29 @@
 .footer{
     background-color: #cccc;
-   
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+.copyText{
+    font-family: Arial;
+    line-height: 1.2;
+    font-size: 20px;
+    padding:0.8rem;
 }
-.footer__socials{
+.connectText{
+    font-family: Arial;
+    line-height: 1.2;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 0.8rem;
+}
+}
+.footer__socials {
     display: flex;
-    justify-content: center;
-    gap: 10px; 
-}
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .social__links img {
+    width: 30px;
+    height: 30px;
+    fill:black
+  }

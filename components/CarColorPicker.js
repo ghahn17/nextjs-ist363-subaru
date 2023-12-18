@@ -1,5 +1,5 @@
 import Swatches from './Swatches';
-import Image from 'next/image';
+import Image from 'next/Image';
 import { useState } from 'react';
 
 

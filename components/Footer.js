@@ -6,7 +6,7 @@ const Footer = () => {
     return (
       <footer className={styles.footer}>
         <Row justifyContent="center">
-            <p className={styles.connectText}>Connect with Us</p>  
+            <p className={styles.connectText}>Connect with us</p>  
         </Row>
 
         <Row justifyContent="center"><FooterSocials /> </Row>
