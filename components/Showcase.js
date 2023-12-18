@@ -1,7 +1,7 @@
 import { scroller }
  from 'react-scroll';
 
- import Image from 'next/Image';
+ import Image from 'next/image';
 import styles from './showcase.module.scss';
 import Heading from './Heading';
 import Button from './Button';

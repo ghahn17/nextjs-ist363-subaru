@@ -1,7 +1,10 @@
-import Image from 'next/Image';
+import Image from 'next/image';
+import Container from '../../components/Container';
 import Layout from '../../components/Layout';
 import { getVehicleBySlug, getAllVehicleSlugs } from '../../lib/api';
+import { getDrivingLocations } from '../../lib/locations';
 import Showcase from '../../components/Showcase'
+import TrimPicker from '../../components/TrimPicker';
 
 // WATERFALL 
 //1. getStaticPaths
@@ -25,18 +28,21 @@ return {
 //2. get static props 
 export async function getStaticProps({ params }) {
     const vehicleData = await getVehicleBySlug(params.id);
+    const drivingLocations = getDrivingLocations();
 
     return {
         props : {
-            vehicleData
+            vehicleData,
+            drivingLocations
         }
     }
 }
 // 3. page component 
 
-const SingleVehiclePage = ({ vehicleData }) => {
+const SingleVehiclePage = ({ vehicleData, drivingLocations }) => {
     const { title, slug, featuredImage,vehicleInformation } = vehicleData;
     const { headline } = vehicleInformation.showcase;
+    const { trimLevels } = vehicleInformation;
     return <Layout>
         <Showcase
             subtitle={title}
@@ -44,7 +50,12 @@ const SingleVehiclePage = ({ vehicleData }) => {
             featuredImage={featuredImage}
         />
         <div id="main-content">
-        Main content will go here
+            <Container>
+        <TrimPicker 
+            trims={trimLevels}
+            locations={drivingLocations}
+          /> 
+      </Container>
         </div>
     </Layout>
 }

@@ -1,6 +1,6 @@
 import Heading from './Heading'
 import { motion } from "framer-motion" 
-import Image from 'next/Image';
+import Image from 'next/image';
 import Link from 'next/link';
 import Paragraph from  './Paragraph.js';
 import styles from './grid.module.scss';

@@ -1,4 +1,4 @@
-import Image from 'next/Image';
+import Image from 'next/image';
 import styles from './btnui.module.scss';
 import classnames from 'classnames/bind';
 
