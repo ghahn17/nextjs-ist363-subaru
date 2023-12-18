@@ -4,7 +4,7 @@ import FilterBar from '../../components/FilterBar';
 import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
 import { getAllVehicles, getVehicleTypes } from '../../lib/api'; 
-import Heading from '../../components/heading'
+import Heading from '../../components/Heading'
 export async function getStaticProps () {
     const vehicles = await getAllVehicles ();
     const vehicleTypes = await getVehicleTypes ();

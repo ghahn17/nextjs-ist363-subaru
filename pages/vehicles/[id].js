@@ -1,6 +1,7 @@
 import Image from 'next/Image';
 import Layout from '../../components/Layout';
 import { getVehicleBySlug, getAllVehicleSlugs } from '../../lib/api';
+import Showcase from '../../components/Showcase'
 
 // WATERFALL 
 //1. getStaticPaths
@@ -37,16 +38,14 @@ const SingleVehiclePage = ({ vehicleData }) => {
     const { title, slug, featuredImage,vehicleInformation } = vehicleData;
     const { headline } = vehicleInformation.showcase;
     return <Layout>
-        <h1>{title}</h1>
-        <h3>{headline}</h3>
-        {featuredImage && 
-        <Image
-            src= {featuredImage.node.sourceUrl}
-            alt={featuredImage.node.altText}
-            width= {featuredImage.node.mediaDetails.width}
-            height = {featuredImage.node.mediaDetails.height}
+        <Showcase
+            subtitle={title}
+            title={headline}
+            featuredImage={featuredImage}
         />
-        }
+        <div id="main-content">
+        Main content will go here
+        </div>
     </Layout>
 }
 export default SingleVehiclePage;
