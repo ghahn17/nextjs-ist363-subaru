@@ -4,6 +4,7 @@ import Layout from '../../components/Layout';
 import { getVehicleBySlug, getAllVehicleSlugs } from '../../lib/api';
 import { getDrivingLocations } from '../../lib/locations';
 import Showcase from '../../components/Showcase'
+import ColorPicker from '../../components/ColorPicker';
 import TrimPicker from '../../components/TrimPicker';
 
 // WATERFALL 
@@ -42,7 +43,7 @@ export async function getStaticProps({ params }) {
 const SingleVehiclePage = ({ vehicleData, drivingLocations }) => {
     const { title, slug, featuredImage,vehicleInformation } = vehicleData;
     const { headline } = vehicleInformation.showcase;
-    const { trimLevels } = vehicleInformation;
+    const { trimLevels, vehicleColors } = vehicleInformation;
     return <Layout>
         <Showcase
             subtitle={title}
@@ -55,6 +56,9 @@ const SingleVehiclePage = ({ vehicleData, drivingLocations }) => {
             trims={trimLevels}
             locations={drivingLocations}
           /> 
+          <ColorPicker
+          colors={vehicleColors}
+          />
       </Container>
         </div>
     </Layout>

@@ -1,18 +1,24 @@
-.swatch {
+@use '../sass/abstracts/vars';
+.swatches {
     &__list {
         margin:0;
         padding:0;
+        margin-bottom: 1rem;
         list-style:none;
-        // background-color: pink;
+        //background-color: pink;
         display: flex;
-        gap:.5rem;
-    }
-    &__item {
-        margin:0;
-        padding:0;
-        list-style: none;
-        background-color: yellow;
-        width: 3rem;
-        height: 3rem;
+        justify-content: center;
+        gap: .5rem;
+        &__item {
+            margin:0;
+            padding:0;
+            list-style: none;
+           // background-color: yellow;
+            width: 3rem;
+            height: 3rem;
+            &.active {
+                border: 3px solid vars.$color__primary;
+            }
+        }
     }
 }

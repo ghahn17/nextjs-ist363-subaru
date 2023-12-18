@@ -1,17 +1,25 @@
+import classnames from 'classnames/bind';
 import styles from './swatches.module.scss'
 
+const cx = classnames.bind(styles);
+
 const Swatches = ({ 
-    changeHandler,
-    data
+    activeColor,
+    colors,
+    setActiveColor
  }) => {
 
-    return <ul className= {styles.swatch__list}>
-        {data.map((item)=> {
+    return <ul className= {styles.swatches__list}>
+        {colors.map((color, index)=> {
+            const swatchClasses = cx({
+                swatches__list__item: true,
+                active: index === activeColor
+            });
         return <li 
-        className= {styles.swatch__item}
-        style={{backgroundColor:item.hex}}
-        onClick={() => {
-            changeHandler(item);
+        className= {swatchClasses}
+        style={{ backgroundColor: color.swatch.edges[0].node.swatchInformation.hexValue}}
+        onClick={()=> {
+            setActiveColor(index);
         }}
         >
             </li>
