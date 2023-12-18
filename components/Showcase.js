@@ -3,7 +3,7 @@ import { scroller }
 
  import Image from 'next/image';
 import styles from './showcase.module.scss';
-import Heading from './Heading';
+import Heading from './heading';
 import Button from './Button';
 const Showcase = ({ featuredImage, subtitle, title }) => {
     return <section className={styles.showcase}>
