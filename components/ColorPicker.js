@@ -21,7 +21,7 @@ const CarColorPicker = ({ colors }) => {
        setActiveColor={setActiveColor} 
        activeColor={activeColor}
        />
-       <Heading level={3} textAlign="center">{colors[activeColor].swatch.edges[0].node.name}</Heading>
+       <Heading level={3} textAlign="center" marginBottom={4} marginTop={4}>{colors[activeColor].swatch.edges[0].node.name}</Heading>
     </section>
 }
 export default CarColorPicker; 

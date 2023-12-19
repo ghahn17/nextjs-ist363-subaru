@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Action from '../../components/Action';
 import Container from '../../components/Container';
+import Head from 'next/head'
 import Layout from '../../components/Layout';
 import { getVehicleBySlug, getAllVehicleSlugs } from '../../lib/api';
 import { getDrivingLocations } from '../../lib/locations';
@@ -46,6 +47,9 @@ const SingleVehiclePage = ({ vehicleData, drivingLocations }) => {
     const { headline } = vehicleInformation.showcase;
     const { trimLevels, vehicleColors } = vehicleInformation;
     return <Layout>
+        <Head>
+            <title>{title} | Subaru USA </title>
+        </Head>
         <Showcase
             subtitle={title}
             title={headline}
@@ -62,7 +66,10 @@ const SingleVehiclePage = ({ vehicleData, drivingLocations }) => {
           />
       </Container>
         </div>
-        <Action />
+        <Action
+         vehicleTitle = {title} 
+         />
+    
     </Layout>
 }
 export default SingleVehiclePage;

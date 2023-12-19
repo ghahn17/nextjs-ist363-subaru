@@ -53,13 +53,15 @@ const TrimPicker = ({ trims, locations }) => {
             height={656}
             className={styles.trimpicker__images__background}
         />
+        {trims[activeTrim].images.large &&
         <Image 
-            src={trims[activeTrim].images.large.node.sourceUrl}
-            alt={trims[activeTrim].images.large.node.altText}
-            width={trims[activeTrim].images.large.node.mediaDetails.width}
-            height={trims[activeTrim].images.large.node.mediaDetails.height}
-            className={styles.trimpicker__images__foreground}
-        />
+        src={trims[activeTrim].images.large.node.sourceUrl}
+        alt={trims[activeTrim].images.large.node.altText}
+        width={trims[activeTrim].images.large.node.mediaDetails.width}
+        height={trims[activeTrim].images.large.node.mediaDetails.height}
+        className={styles.trimpicker__images__foreground}
+    />
+        }
         </div>
     </section>
 }

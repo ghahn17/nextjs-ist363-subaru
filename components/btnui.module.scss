@@ -1,4 +1,5 @@
-.btnui{
+@use '../sass/abstracts/mixins';
+.btnui {
 background-color: transparent;
 width:3rem;
 height:3rem;
@@ -14,5 +15,9 @@ img{
     position:absolute;
     top:1rem;
     right:1rem;
+}
+&.menu{
+    @include mixins.breakpoint (laptop) {
+        display:none; }
 }
 }
