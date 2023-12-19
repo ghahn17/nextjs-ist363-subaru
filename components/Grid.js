@@ -42,10 +42,10 @@ const Grid = ({ items }) => {
                 >
                 {trimLevels && trimLevels[0].images.thumbnail && 
                 <Image 
-                    src= {trimLevels [0].images.thumbnail.node.sourceUrl}
-                    alt={trimLevels [0].images.thumbnail.node.altText}
-                    width={trimLevels [0].images.thumbnail.node.mediaDetails.width}
-                    height={trimLevels [0].images.thumbnail.node.mediaDetails.height}
+                    src={trimLevels[0].images.thumbnail.node.sourceUrl}
+                    alt={trimLevels[0].images.thumbnail.node.altText}
+                    width={trimLevels[0].images.thumbnail.node.mediaDetails.width}
+                    height={trimLevels[0].images.thumbnail.node.mediaDetails.height}
                 />
                 }
                 <Heading 
