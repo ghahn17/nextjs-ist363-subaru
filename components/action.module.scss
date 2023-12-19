@@ -1,0 +1,21 @@
+@use '../sass/abstracts/vars';
+@use '../sass/abstracts/mixins';
+.action{
+    background-color: black;
+    width:100%;
+    padding: 2rem;
+    &__call {
+        color: white;
+        text-align: center;
+        padding:1.5rem;
+        font-family: Arial;
+    }
+}
+.action__btns{
+  padding: .75rem 2rem;
+  font-weight: bold;
+  font-family: Arial;
+  margin: 0 auto; /* Centers buttons horizontally */
+  text-align: center; /* Aligns text inside buttons to center */
+  width:100%;
+}

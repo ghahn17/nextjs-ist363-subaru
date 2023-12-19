@@ -10,7 +10,9 @@ const Button = ({
     let buttonClasses = cx ({
         btn:true,
         primary : type === 'primary',
-        secondary : type === "secondary"
+        secondary : type === 'secondary',
+        buildButton: type === 'build', 
+        contactButton: type === 'contact', 
     })
 return <button 
     className={buttonClasses}

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Action from '../../components/Action';
 import Container from '../../components/Container';
 import Layout from '../../components/Layout';
 import { getVehicleBySlug, getAllVehicleSlugs } from '../../lib/api';
@@ -61,6 +62,7 @@ const SingleVehiclePage = ({ vehicleData, drivingLocations }) => {
           />
       </Container>
         </div>
+        <Action />
     </Layout>
 }
 export default SingleVehiclePage;
