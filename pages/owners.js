@@ -6,7 +6,7 @@ import Paragraph from '../components/Paragraph'
 const OwnersPage = () => {
   return <Layout>
     <Container>
-    <Heading level={1} textAlign="center">Onwers</Heading>
+    <Heading level={1} textAlign="center">Owners</Heading>
     <Paragraph>Looking to buy a Subaru car or SUV? Customize your perfect Subaru vehicle with our tools. Choose models, trims, options, and colors. Build yours today!</Paragraph>
     </Container>
 </Layout>
